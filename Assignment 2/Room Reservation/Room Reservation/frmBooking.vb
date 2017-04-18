@@ -13,6 +13,8 @@ Public Class frmBooking
     Public Const CONNECTION_STRING As String = _
      "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=RoomReservationDB.accdb"
     Dim lsData As List(Of Hashtable)
+    Dim lsData3 As New List(Of Hashtable)
+    Dim iCurrentIndex As Integer
 
 
 
@@ -313,4 +315,29 @@ Public Class frmBooking
 
   
    
+    Private Sub btnFirst_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirst.Click
+        Dim htData As Hashtable
+        Dim iIndex As Integer
+        Try
+            iIndex = 0
+            iCurrentIndex = iIndex
+            htData = lsData3.Item(iIndex)
+
+            populateFormFields(htData)
+
+            Dim BookingDetails As String
+            BookingDetails = CStr(htData("booking_id"))
+            BookingDetails = BookingDetails & " | " & CDate(htData("booking_date"))
+            BookingDetails = BookingDetails & " | " & CInt(htData("room_id"))
+            BookingDetails = BookingDetails & " | " & CInt(htData("customer_id"))
+            BookingDetails = BookingDetails & " | " & CInt(htData("num_days"))
+            BookingDetails = BookingDetails & " | " & CInt(htData("num_guests"))
+            BookingDetails = BookingDetails & " | " & CDate(htData("checkin_day"))
+            BookingDetails = BookingDetails & " | " & CInt(htData("total_price"))
+            BookingDetails = BookingDetails & " | " & CStr(htData("comments"))
+            Debug.Print("BookingDetails: " & vbCrLf & BookingDetails)
+        Catch ex As Exception
+            MsgBox("Out of record, Please do not click anymore", MsgBoxStyle.OkOnly, "Stop")
+        End Try
+    End Sub
 End Class

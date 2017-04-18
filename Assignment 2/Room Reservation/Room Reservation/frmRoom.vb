@@ -9,15 +9,19 @@ Option Strict On
 Imports System.Data.OleDb
 Imports System.IO
 Public Class frmRoom
+
     Public Const CONNECTION_STRING As String = _
     "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=RoomReservationDB.accdb"
+
+    Dim lsData2 As New List(Of Hashtable)
+    Dim iCurrentIndex As Integer
 
     Private Sub txtcusid_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtroomid.TextChanged
 
     End Sub
 
     Private Sub frmRoom_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCustomer.Click
@@ -33,7 +37,7 @@ Public Class frmRoom
     End Sub
 
     Private Sub btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnadd.Click
-        
+
         Dim btnValid2 = ValidationForm()
         Dim htData1 As Hashtable = New Hashtable
 
@@ -48,7 +52,7 @@ Public Class frmRoom
 
         Dim RoomInsert As RoomDataController = New RoomDataController
         RoomInsert.insertRoom(htData1)
-        
+
 
 
 
@@ -224,6 +228,110 @@ Public Class frmRoom
         txtfloor.Items.Clear()
         txtdescription.Clear()
 
+
+    End Sub
+
+    Private Sub btnNext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNext.Click
+        Dim htData As Hashtable
+        Dim iIndex As Integer
+        Try
+            iIndex = iCurrentIndex + 1
+            iCurrentIndex = iIndex
+            htData = lsData2.Item(iIndex)
+
+            populateFormFields(htData)
+
+            Dim RoomDetails As String
+            RoomDetails = CStr(htData("room_id"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("room_number"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("type"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("price"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("numb_beds"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("availability"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("floor"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("description"))
+            Debug.Print("RoomDetails: " & vbCrLf & RoomDetails)
+        Catch ex As Exception
+            MsgBox("Out of record, Please do not click anymore", MsgBoxStyle.OkOnly, "Stop")
+        End Try
+    End Sub
+
+    Private Sub btnFirst_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirst.Click
+        Dim htData As Hashtable
+        Dim iIndex As Integer
+        Try
+            iIndex = 0
+            iCurrentIndex = iIndex
+            htData = lsData2.Item(iIndex)
+
+            populateFormFields(htData)
+
+            Dim RoomDetails As String
+            RoomDetails = CStr(htData("room_id"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("room_number"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("type"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("price"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("numb_beds"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("availability"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("floor"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("description"))
+            Debug.Print("RoomDetails: " & vbCrLf & RoomDetails)
+        Catch ex As Exception
+            MsgBox("Out of record, Please do not click anymore", MsgBoxStyle.OkOnly, "Stop")
+        End Try
+    End Sub
+
+    Private Sub btnLast_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLast.Click
+        Dim htData As Hashtable
+        Dim iIndex As Integer
+        Try
+            iIndex = lsData2.Count - 1
+            iCurrentIndex = iIndex
+            htData = lsData2.Item(iIndex)
+
+            populateFormFields(htData)
+
+            Dim RoomDetails As String
+            RoomDetails = CStr(htData("room_id"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("room_number"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("type"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("price"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("numb_beds"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("availability"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("floor"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("description"))
+            Debug.Print("RoomDetails: " & vbCrLf & RoomDetails)
+        Catch ex As Exception
+            MsgBox("Out of record, Please do not click anymore", MsgBoxStyle.OkOnly, "Stop")
+        End Try
+    End Sub
+
+    Private Sub btnPrev_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrev.Click
+        Dim htData As Hashtable
+        Dim iIndex As Integer
+        Try
+            iIndex = iCurrentIndex - 1
+            iCurrentIndex = iIndex
+            htData = lsData2.Item(iIndex)
+
+            populateFormFields(htData)
+
+            Dim RoomDetails As String
+            RoomDetails = CStr(htData("room_id"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("room_number"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("type"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("price"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("numb_beds"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("availability"))
+            RoomDetails = RoomDetails & " | " & CInt(htData("floor"))
+            RoomDetails = RoomDetails & " | " & CStr(htData("description"))
+            Debug.Print("RoomDetails: " & vbCrLf & RoomDetails)
+        Catch ex As Exception
+            MsgBox("Out of record, Please do not click anymore", MsgBoxStyle.OkOnly, "Stop")
+        End Try
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     End Sub
 End Class

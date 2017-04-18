@@ -62,6 +62,10 @@ Partial Class frmBooking
         Me.txtcusid = New System.Windows.Forms.ComboBox()
         Me.btnBookUpdate = New System.Windows.Forms.Button()
         Me.btnDeleteBook = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnLast = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.btnFirst = New System.Windows.Forms.Button()
         CType(Me.picerror8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picerror7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picerror6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +80,7 @@ Partial Class frmBooking
         '
         'btnadd
         '
-        Me.btnadd.Location = New System.Drawing.Point(187, 371)
+        Me.btnadd.Location = New System.Drawing.Point(479, 315)
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(98, 33)
         Me.btnadd.TabIndex = 46
@@ -411,11 +415,51 @@ Partial Class frmBooking
         Me.btnDeleteBook.Text = "Delete"
         Me.btnDeleteBook.UseVisualStyleBackColor = True
         '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(263, 385)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.TabIndex = 70
+        Me.btnNext.Text = ">"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnLast
+        '
+        Me.btnLast.Location = New System.Drawing.Point(376, 385)
+        Me.btnLast.Name = "btnLast"
+        Me.btnLast.Size = New System.Drawing.Size(75, 23)
+        Me.btnLast.TabIndex = 69
+        Me.btnLast.Text = "<|"
+        Me.btnLast.UseVisualStyleBackColor = True
+        '
+        'btnPrev
+        '
+        Me.btnPrev.Location = New System.Drawing.Point(148, 385)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrev.TabIndex = 68
+        Me.btnPrev.Text = "<"
+        Me.btnPrev.UseVisualStyleBackColor = True
+        '
+        'btnFirst
+        '
+        Me.btnFirst.Location = New System.Drawing.Point(37, 385)
+        Me.btnFirst.Name = "btnFirst"
+        Me.btnFirst.Size = New System.Drawing.Size(75, 23)
+        Me.btnFirst.TabIndex = 67
+        Me.btnFirst.Text = "|<"
+        Me.btnFirst.UseVisualStyleBackColor = True
+        '
         'frmBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(605, 453)
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnLast)
+        Me.Controls.Add(Me.btnPrev)
+        Me.Controls.Add(Me.btnFirst)
         Me.Controls.Add(Me.btnDeleteBook)
         Me.Controls.Add(Me.btnBookUpdate)
         Me.Controls.Add(Me.txtcusid)
@@ -508,4 +552,8 @@ Partial Class frmBooking
     Friend WithEvents txtcusid As System.Windows.Forms.ComboBox
     Friend WithEvents btnBookUpdate As System.Windows.Forms.Button
     Friend WithEvents btnDeleteBook As System.Windows.Forms.Button
+    Friend WithEvents btnNext As System.Windows.Forms.Button
+    Friend WithEvents btnLast As System.Windows.Forms.Button
+    Friend WithEvents btnPrev As System.Windows.Forms.Button
+    Friend WithEvents btnFirst As System.Windows.Forms.Button
 End Class

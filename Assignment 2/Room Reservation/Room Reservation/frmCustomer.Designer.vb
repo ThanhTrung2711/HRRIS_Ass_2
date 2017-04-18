@@ -195,7 +195,7 @@ Partial Class frmCustomer
         '
         'btnadd
         '
-        Me.btnadd.Location = New System.Drawing.Point(460, 299)
+        Me.btnadd.Location = New System.Drawing.Point(499, 299)
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(98, 33)
         Me.btnadd.TabIndex = 18
@@ -294,7 +294,7 @@ Partial Class frmCustomer
         '
         'btnBooking
         '
-        Me.btnBooking.Location = New System.Drawing.Point(460, 33)
+        Me.btnBooking.Location = New System.Drawing.Point(499, 33)
         Me.btnBooking.Name = "btnBooking"
         Me.btnBooking.Size = New System.Drawing.Size(98, 33)
         Me.btnBooking.TabIndex = 28
@@ -303,7 +303,7 @@ Partial Class frmCustomer
         '
         'btnRoom
         '
-        Me.btnRoom.Location = New System.Drawing.Point(460, 81)
+        Me.btnRoom.Location = New System.Drawing.Point(499, 81)
         Me.btnRoom.Name = "btnRoom"
         Me.btnRoom.Size = New System.Drawing.Size(98, 33)
         Me.btnRoom.TabIndex = 29
@@ -319,7 +319,7 @@ Partial Class frmCustomer
         '
         'btnfindID
         '
-        Me.btnfindID.Location = New System.Drawing.Point(460, 189)
+        Me.btnfindID.Location = New System.Drawing.Point(499, 189)
         Me.btnfindID.Name = "btnfindID"
         Me.btnfindID.Size = New System.Drawing.Size(98, 33)
         Me.btnfindID.TabIndex = 31
@@ -346,7 +346,7 @@ Partial Class frmCustomer
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(460, 136)
+        Me.btnUpdate.Location = New System.Drawing.Point(499, 136)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(98, 33)
         Me.btnUpdate.TabIndex = 34
@@ -355,7 +355,7 @@ Partial Class frmCustomer
         '
         'btnDeleteCus
         '
-        Me.btnDeleteCus.Location = New System.Drawing.Point(460, 241)
+        Me.btnDeleteCus.Location = New System.Drawing.Point(499, 241)
         Me.btnDeleteCus.Name = "btnDeleteCus"
         Me.btnDeleteCus.Size = New System.Drawing.Size(98, 33)
         Me.btnDeleteCus.TabIndex = 35
@@ -402,7 +402,7 @@ Partial Class frmCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(970, 603)
+        Me.ClientSize = New System.Drawing.Size(676, 476)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnLast)
         Me.Controls.Add(Me.btnPrev)

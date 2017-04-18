@@ -52,6 +52,10 @@ Partial Class frmRoom
         Me.txtfloor = New System.Windows.Forms.ComboBox()
         Me.btnRoomUpdate = New System.Windows.Forms.Button()
         Me.btnDeleteRoom = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnLast = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.btnFirst = New System.Windows.Forms.Button()
         CType(Me.picerror7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picerror6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picerror4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +68,7 @@ Partial Class frmRoom
         '
         'btnadd
         '
-        Me.btnadd.Location = New System.Drawing.Point(192, 344)
+        Me.btnadd.Location = New System.Drawing.Point(472, 290)
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(98, 33)
         Me.btnadd.TabIndex = 46
@@ -331,11 +335,51 @@ Partial Class frmRoom
         Me.btnDeleteRoom.Text = "Delete"
         Me.btnDeleteRoom.UseVisualStyleBackColor = True
         '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(266, 360)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.TabIndex = 67
+        Me.btnNext.Text = ">"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnLast
+        '
+        Me.btnLast.Location = New System.Drawing.Point(379, 360)
+        Me.btnLast.Name = "btnLast"
+        Me.btnLast.Size = New System.Drawing.Size(75, 23)
+        Me.btnLast.TabIndex = 66
+        Me.btnLast.Text = "<|"
+        Me.btnLast.UseVisualStyleBackColor = True
+        '
+        'btnPrev
+        '
+        Me.btnPrev.Location = New System.Drawing.Point(151, 360)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrev.TabIndex = 65
+        Me.btnPrev.Text = "<"
+        Me.btnPrev.UseVisualStyleBackColor = True
+        '
+        'btnFirst
+        '
+        Me.btnFirst.Location = New System.Drawing.Point(40, 360)
+        Me.btnFirst.Name = "btnFirst"
+        Me.btnFirst.Size = New System.Drawing.Size(75, 23)
+        Me.btnFirst.TabIndex = 64
+        Me.btnFirst.Text = "|<"
+        Me.btnFirst.UseVisualStyleBackColor = True
+        '
         'frmRoom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(613, 423)
+        Me.ClientSize = New System.Drawing.Size(613, 527)
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnLast)
+        Me.Controls.Add(Me.btnPrev)
+        Me.Controls.Add(Me.btnFirst)
         Me.Controls.Add(Me.btnDeleteRoom)
         Me.Controls.Add(Me.btnRoomUpdate)
         Me.Controls.Add(Me.txtfloor)
@@ -410,4 +454,8 @@ Partial Class frmRoom
     Friend WithEvents txtfloor As System.Windows.Forms.ComboBox
     Friend WithEvents btnRoomUpdate As System.Windows.Forms.Button
     Friend WithEvents btnDeleteRoom As System.Windows.Forms.Button
+    Friend WithEvents btnNext As System.Windows.Forms.Button
+    Friend WithEvents btnLast As System.Windows.Forms.Button
+    Friend WithEvents btnPrev As System.Windows.Forms.Button
+    Friend WithEvents btnFirst As System.Windows.Forms.Button
 End Class
