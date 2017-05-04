@@ -5,6 +5,9 @@ Option Strict On
 ' Description: Class to control all data for Room Form
 ' Author:      Nguyen Thanh Trung
 ' Date:        11/04/2017
+' Subject name: ISYS2116 –Information Systems Solutions and Design
+' Semester 1 of 2017
+' Tutor: Mr.Ashish Das
 
 Imports System.Data.OleDb
 Imports System.IO

@@ -5,6 +5,10 @@ Option Strict On
 ' Description: Validate data from Customer table
 ' Author:      Nguyen Thanh Trung
 ' Date:        17/03/2017
+' Subject name: ISYS2116 –Information Systems Solutions and Design
+' Semester 1 of 2017
+' Tutor: Mr.Ashish Das
+
 Imports System.Text.RegularExpressions
 Public Class Validation
 
