@@ -205,9 +205,20 @@ Public Class frmBooking
                 picerror6.Visible = True
                 MsgBox("Checking date cannot be the past")
                 bAllFieldsValid = False
+
+            ElseIf txtcheckinday.Value < txtdate.Value Then
+
+                picerror6.Visible = True
+                MsgBox("Booking date cannot be bigger than checking date")
+                bAllFieldsValid = False
+                'Else
+                '    picerror6.Visible = False
+                'End If
+
             Else
                 picerror6.Visible = False
             End If
+
         Else
             picerror6.Visible = True
             Debug.Print(" Value is not numeric")
